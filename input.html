@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mushroom Classification</title>
+  <style>
+    /* Add your CSS styling here */
+  </style>
+</head>
+<body align="center" background="C:\Users\Rajasekar\OneDrive\Desktop\projects\naan mudhalvan\nm IBM\Nm_ibm\mushroom.webp" link="#000" alink="#017bf5" vlink="#000">
+  <header> <br><br><br>
+    <h1 align ="center">Mushroom Prediction</h1>
+  </header>
+  
+  <main>
+    <section><br>
+      <h2 align="center">About</h2>
+      <p align="center">
+        <!-- Add information about the Mushroom Classification prediction project here -->
+      </p>
+    </section>
+
+    <section>
+      <h2>Upload an Image</h2>
+      <form id="uploadForm" action="#" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Predict</button>
+      </form>
+    </section>
+
+    <section id="resultSection" style="display: none;">
+      <h2>Prediction Result</h2>
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("uploadForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      var formData = new FormData(this);
+      // Perform prediction using the uploaded image
+      // Send the image data to the server and handle the response
+      
+      // Example code to display a prediction result
+      var resultSection = document.getElementById("resultSection");
+      var resultElement = document.getElementById("result");
+      resultElement.textContent = "Prediction Result: Mushroom X";
+      resultSection.style.display = "block";
+    });
+  </script>
+</body>
+</html>
